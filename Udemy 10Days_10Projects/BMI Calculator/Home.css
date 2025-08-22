@@ -1,0 +1,24 @@
+body{
+    background-color: pink;
+}
+.container{
+    justify-self: center;
+    width: 500px;
+    height: 400px;
+    background-color: yellowgreen;
+    display:flex;
+    flex-direction: column;
+}
+h2{
+    text-align: center;
+}
+#bmiform{
+    background-color: rgb(146, 155, 128);
+    justify-self: center;
+    align-items: center;
+    width: 350px;
+    height: 300px;
+}
+label,input{
+    margin: 6px 0px 8px 0px;
+}

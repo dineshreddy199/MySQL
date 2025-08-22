@@ -1,0 +1,75 @@
+Controlled vs Uncontrolled
+Controlled vs Uncontrolled Components in React
+
+In React, **form inputs** (like `<input>`, `<textarea>`, `<select>`) can be **controlled** or **uncontrolled**, depending on how their state is managed.
+
+---
+
+### 🔹 **Controlled Components**
+
+A **controlled component** is one where **React manages the form data** via state.
+
+* The input's value is bound to a **state variable**.
+* You must use an **`onChange` handler** to update the state.
+* The input value is always controlled by React.
+
+**Example:**
+
+```jsx
+const [name, setName] = useState('');
+
+<input
+  type="text"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+/>
+```
+
+**Key Traits:**
+
+* Single source of truth: React state
+* Easier validation and dynamic behavior
+* More predictable
+
+---
+
+### 🔸 **Uncontrolled Components**
+
+An **uncontrolled component** uses the **DOM itself to store the form data**.
+
+* You **don't bind value** to state.
+* You use **`ref`** to access the value when needed (e.g., on form submission).
+
+**Example:**
+
+```jsx
+const nameRef = useRef();
+
+<input type="text" ref={nameRef} />
+```
+
+**Key Traits:**
+
+* Faster setup for simple forms
+* Less React code
+* Harder to validate or control dynamically
+
+---
+
+### ⚖️ **Comparison Table**
+
+| Feature         | Controlled                | Uncontrolled                         |
+| --------------- | ------------------------- | ------------------------------------ |
+| Data source     | React state               | DOM (via `ref`)                      |
+| Access value    | `useState`, `onChange`    | `useRef` or `document.querySelector` |
+| Ideal for       | Complex forms, validation | Simple forms, quick inputs           |
+| React re-render | On every change           | Only when needed                     |
+
+---
+
+### 🧠 Summary:
+
+* Use **controlled components** when you need full control, validation, or dynamic input behavior.
+* Use **uncontrolled components** for quick forms or when integrating with non-React libraries.
+
+Let me know if you'd like a real-world example using both together!

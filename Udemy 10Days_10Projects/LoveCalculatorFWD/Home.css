@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(253, 199, 208);
+}
+
+.container{
+    justify-self:center;
+    background-color: rgb(252, 181, 193);
+    width: 500px;
+    height: 300px;
+    border-radius: 30px;
+}
+.form{
+    justify-self:center;
+    width: 400px;
+    height: 250px;
+    margin-top: 60px;
+    position: relative;
+    top: 20px;
+
+}
+h1{
+    text-align: center;
+}
+input{
+    align-items: center;
+    height: 30px;
+    width: 300px;
+    margin: 0px 0px 20px 40px;
+    border: groove;
+}
+.submit{
+    background-color: rgb(156, 236, 35);
+    width: 150px;
+    height: 35px;
+    margin:0px 20px 0px 40px;
+    border-radius: 10px;
+}
+
+/* .result{
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    font-style:oblique;
+} */
